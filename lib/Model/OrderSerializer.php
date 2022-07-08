@@ -88,7 +88,8 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'expected_capture_date' => 'string',
         'capture_delay' => 'int',
         'persist_url' => 'string',
-        'expiry_date' => '\DateTime'
+        'expiry_date' => '\DateTime',
+        'items' => 'array'
     ];
 
     /**
@@ -128,7 +129,8 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'expected_capture_date' => null,
         'capture_delay' => null,
         'persist_url' => null,
-        'expiry_date' => 'date-time'
+        'expiry_date' => 'date-time',
+        'items' => null
     ];
 
     /**
@@ -189,7 +191,8 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'expected_capture_date' => 'expected_capture_date',
         'capture_delay' => 'capture_delay',
         'persist_url' => 'persist_url',
-        'expiry_date' => 'expiry_date'
+        'expiry_date' => 'expiry_date',
+        'items' => 'items'
     ];
 
     /**
@@ -229,7 +232,9 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'expected_capture_date' => 'setExpectedCaptureDate',
         'capture_delay' => 'setCaptureDelay',
         'persist_url' => 'setPersistUrl',
-        'expiry_date' => 'setExpiryDate'
+        'expiry_date' => 'setExpiryDate',
+        'items' => 'setItems',
+
     ];
 
     /**
@@ -269,7 +274,9 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'expected_capture_date' => 'getExpectedCaptureDate',
         'capture_delay' => 'getCaptureDelay',
         'persist_url' => 'getPersistUrl',
-        'expiry_date' => 'getExpiryDate'
+        'expiry_date' => 'getExpiryDate',
+        'items' => 'getItems',
+
     ];
 
     /**
@@ -441,6 +448,7 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         $this->container['capture_delay'] = isset($data['capture_delay']) ? $data['capture_delay'] : null;
         $this->container['persist_url'] = isset($data['persist_url']) ? $data['persist_url'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -1430,6 +1438,26 @@ class OrderSerializer implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * @param array $items
+     * @return $this
+     */
+    public function setItems($items){
+
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
