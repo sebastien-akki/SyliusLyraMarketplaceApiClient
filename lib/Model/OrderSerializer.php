@@ -89,7 +89,7 @@ class OrderSerializer implements ModelInterface, ArrayAccess
         'capture_delay' => 'int',
         'persist_url' => 'string',
         'expiry_date' => '\DateTime',
-        'items' => 'array'
+        'items' => '\Swagger\Client\Model\ItemSerializer',
     ];
 
     /**
