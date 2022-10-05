@@ -152,7 +152,7 @@ class TokensApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = $responseBody->__toString();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
                 }
@@ -222,7 +222,7 @@ class TokensApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = $responseBody->__toString();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -416,7 +416,7 @@ class TokensApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = $responseBody->__toString();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
                 }
@@ -486,7 +486,7 @@ class TokensApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = $responseBody->__toString();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -686,7 +686,7 @@ class TokensApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = $responseBody->__toString();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
                 }
@@ -758,7 +758,7 @@ class TokensApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = $responseBody->__toString();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -956,7 +956,7 @@ class TokensApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = $responseBody->__toString();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
                 }
@@ -1026,7 +1026,7 @@ class TokensApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = $responseBody->__toString();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
