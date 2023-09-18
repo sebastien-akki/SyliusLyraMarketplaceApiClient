@@ -1567,7 +1567,7 @@ class OrdersApi
             );
         }
 
-        $resourcePath = '/orders/{uuid}/execute-embedded/token';
+        $resourcePath = '/orders/{uuid}/execute-embedded/token?wallet';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
