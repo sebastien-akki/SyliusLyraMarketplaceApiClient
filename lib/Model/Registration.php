@@ -1412,6 +1412,12 @@ class Registration implements ModelInterface, ArrayAccess
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
+
+    // remove from container
+    public function remove($key)
+    {
+        unset($this->container[$key]);
+    }
 }
 
 
